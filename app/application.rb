@@ -1,7 +1,7 @@
 class Application
 
   @@items = ["Apples","Carrots","Pears"]
-  @@cart = ["asdf"]
+  @@cart = []
 
   def call(env)
     resp = Rack::Response.new
@@ -23,9 +23,6 @@ class Application
     if req.path.match(/cart/)
       if @@cart.empty? 
         resp.write "Your cart is empty"
-      else 
-        @@cart.each do |i| 
-          i
       end 
     end 
  
