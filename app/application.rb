@@ -28,8 +28,8 @@ class Application
     
     if req.path.match(/add/)
       add_item = req.params["item"]
-      if @@items. {|i| i == add_item} 
-        @@cart << i 
+      if @@items.include?(add_item)
+        @@cart << add_item
       end 
     end 
  
