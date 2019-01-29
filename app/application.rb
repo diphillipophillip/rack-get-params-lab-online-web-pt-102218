@@ -26,6 +26,7 @@ class Application
       else 
         @@cart.each do |t| 
           resp.write "#{t}"
+        end 
       end 
     end 
     
