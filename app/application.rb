@@ -23,6 +23,11 @@ class Application
     if req.path.match(/cart/)
       if @@cart.empty? 
         resp.write "Your cart is empty"
+      else 
+        @@cart.each do |t| 
+          t 
+        end 
+      end 
       end 
     end 
     
