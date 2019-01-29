@@ -25,6 +25,12 @@ class Application
         resp.write "Your cart is empty"
       end 
     end 
+    
+    if req.path.match(/add/)
+      add_item = req.params["q"]
+      if @@items.each {|i| i == add_item} 
+        @@cart << i 
+      end 
  
     resp.finish
   end
