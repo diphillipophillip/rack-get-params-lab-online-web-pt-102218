@@ -31,6 +31,7 @@ class Application
       if @@items.each {|i| i == add_item} 
         @@cart << i 
       end 
+    end 
  
     resp.finish
   end
