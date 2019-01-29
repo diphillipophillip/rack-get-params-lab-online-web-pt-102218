@@ -27,7 +27,7 @@ class Application
     end 
     
     if req.path.match(/add/)
-      add_item = req.params["q"]
+      add_item = req.params["item"]
       if @@items.each {|i| i == add_item} 
         @@cart << i 
       end 
